@@ -96,15 +96,15 @@ const HomeScreen: React.FC = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.innerContainer}>
+        <LogoHeader />
+        <ViceHeader title={'Latest'} subTitle={''} />
+        <CategoryListRender />
         {isLoading && page === 1 ? (
           <View style={styles.loadingContainer}>
             <ActivityIndicator size="large" color="#1877F2" />
           </View>
         ) : (
           <>
-            <LogoHeader />
-            <ViceHeader title={'Latest'} subTitle={'See all'} />
-            <CategoryListRender />
             <NewListRender />
           </>
         )}
